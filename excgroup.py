@@ -2,7 +2,7 @@ bl_info = {
     "name": "Exclusive Groups",
     "description": "Quick assign to groups exclusive",
     "author": "A Nakanosora",
-    "version": (1, 2),
+    "version": (1, 3),
     "blender": (2, 76, 0),
     "location": "View 3D > Toolbar (T) > Relations",
     "warning": "",
@@ -17,6 +17,7 @@ class ExclusiveGroupsPanel(bpy.types.Panel):
     bl_region_type = "TOOLS"
     bl_category = "Relations"
     bl_idname = 'view3d.excgroup_mainpanel'
+    bl_context = "objectmode"
 
     def draw(self, context):
         layout = self.layout
